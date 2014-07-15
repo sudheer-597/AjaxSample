@@ -1,0 +1,22 @@
+<%@ tag language="java" pageEncoding="ISO-8859-1"%>
+<%@ attribute name="id" required="true"%>
+<%@ attribute name="readOnly" required="true"%>
+
+<% 
+//System.out.println(request.getParameter("valToReplace"));	
+  boolean val = Boolean.valueOf(readOnly);
+	//System.out.println(val);
+	
+	String value=request.getParameter("value");
+  if(val){
+	 // System.out.println("if");
+	  %>
+	  <label id="${id}">Readonly</label>
+	  <%
+  }else{
+//System.out.println("else");
+	  %>
+	  <input type="text" id="${id}" name="tagId" value="Edit"/>
+	  <%
+  }
+%>

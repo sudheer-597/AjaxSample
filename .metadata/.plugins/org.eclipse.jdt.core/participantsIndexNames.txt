@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+E:\AjaxSample\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2458702558.index
+\SampleAjaxRefreshPage
+E:\AjaxSample\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3252356017.index
+\SampleAjaxPageRefresh

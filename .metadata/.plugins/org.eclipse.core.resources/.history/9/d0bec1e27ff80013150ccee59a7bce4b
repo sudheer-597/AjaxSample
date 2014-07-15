@@ -1,0 +1,33 @@
+package com.kewill;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+@RequestMapping("/controller")
+public class SpringController{
+
+	@RequestMapping(value="/getView", method = RequestMethod.GET)
+	protected ModelAndView hello(@RequestParam(value="valToSend", required=false) String value) throws Exception {
+		System.out.println("first view");
+		System.out.println(value);
+		if(value==null)
+			value="changeToText";
+		return new ModelAndView("targetPage","value",value);
+	}
+	
+	/*@RequestMapping(value="/changeView", method = RequestMethod.GET)
+	protected ModelAndView handleView(HttpServletRequest req,
+			HttpServletResponse res) throws Exception {
+		System.out.println("second view");
+		System.out.println(req.getParameter("valToSend"));
+		return new ModelAndView("targetPage","propValue",req.getParameter("hello"));
+	}*/
+
+}

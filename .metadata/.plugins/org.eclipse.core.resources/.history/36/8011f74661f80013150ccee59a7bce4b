@@ -1,0 +1,13 @@
+<%@ tag language="java" pageEncoding="ISO-8859-1"%>
+<% 
+  boolean prot=false;
+  if(prot){
+	  %>
+	  <label id="tagId">Readonly</label>
+	  <%
+  }else{
+	  %>
+	  <input type="text" id="tagId" name="tagId" value="Edit"/>
+	  <%
+  }
+%>

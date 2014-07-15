@@ -1,0 +1,39 @@
+!SESSION 2014-06-20 15:09:30.878 -----------------------------------------------
+eclipse.buildId=M20110210-1200
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.wst.server.core 4 0 2014-06-20 15:15:55.878
+!MESSAGE Server Tomcat v7.0 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2014-06-20 15:21:29.298
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2014-06-20 15:21:29.298
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@14bb78),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@756b37,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1e0cbd8)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@4d40df)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@14bb78),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@756b37,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1e0cbd8)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@4d40df)),sourcePriority=1064961)
+!SESSION 2014-06-27 15:45:22.375 -----------------------------------------------
+eclipse.buildId=M20110210-1200
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.ui.workbench 2 0 2014-06-27 15:54:20.144
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2014-06-27 15:54:20.144
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@184dc98),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@47b708,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1b181f1)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1e5c339)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@184dc98),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@47b708,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1b181f1)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1e5c339)),sourcePriority=1064961)

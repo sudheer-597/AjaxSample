@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix="easy" tagdir="/WEB-INF/tags"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+<div id="parentId">
+<easy:field id="mainID" readOnly="true"/>
+<input type="text" id="sendRed" name="sendReq" value="SendReq" onchange="javascript:loadXMLDoc()"/>
+</div>
+<script type="text/javascript">
+
+function loadXMLDoc() {
+	var val=document.getElementById("mainID").readOnly;
+//changeProtValue();
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } 
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 ) {
+           if(xmlhttp.status == 200){
+        	   var element=document.getElementById("mainID");
+        	   element.parentNode.removeChild(element);
+               document.getElementById("parentId").innerHTML = xmlhttp.responseText;
+           }
+           else if(xmlhttp.status == 400) {
+              alert('There was an error 400');
+           }
+           else {
+               alert('something else other than 200 was returned');
+           }
+        }
+    };
+    xmlhttp.open("GET", "http://localhost:8080/SampleAjaxRefreshPage/controller/changeView.htm?hello=hi", true);
+    xmlhttp.send();
+}
+/* function changeProtValue(){
+	document.getElementById("mainID").readOnly="false";
+	
+} */
+</script>
+</body>
+</html>

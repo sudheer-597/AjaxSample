@@ -1,0 +1,19 @@
+<%@ tag language="java" pageEncoding="ISO-8859-1"%>
+<%@ attribute name="id" required="true"%>
+<%@ attribute name="readOnly" required="true"%>
+
+<% 
+ // boolean val = Boolean.valueOf(readOnly);
+	//System.out.println(val);
+  if(${readOnly}){
+	  System.out.println("if");
+	  %>
+	  <label id="${id}">Readonly</label>
+	  <%
+  }else{
+System.out.println("else");
+	  %>
+	  <input type="text" id="${id}" name="tagId" value="Edit"/>
+	  <%
+  }
+%>

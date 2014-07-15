@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="easy" tagdir="/WEB-INF/tags"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+	<script type="text/javascript">
+		function loadXMLDoc() {
+			//changeProtValue();
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			}
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4) {
+					if (xmlhttp.status == 200) {
+						var element = document.getElementById("mainID");
+						element.parentNode.removeChild(element);
+						alert(document.getElementById("mainID"));
+						document.getElementById("mainID").innerHTML = xmlhttp.responseText;
+					} else if (xmlhttp.status == 400) {
+						alert('There was an error 400');
+					} else {
+						alert('something else other than 200 was returned');
+					}
+				}
+			};
+			xmlhttp
+					.open(
+							"GET",
+							"http://192.168.71.90:8080/SampleAjaxRefreshPage/controller/getView.htm",
+							true);
+			xmlhttp.send();
+		}
+		/* function changeProtValue(){
+		 document.getElementById("mainID").readOnly="false";
+		
+		 } */
+	</script>
+	<form id="mForm" name="myForm">
+		<easy:field id="mainID" readOnly="true" />
+		<input type="text" id="sendRed" name="sendReq" value="SendReq"
+			onchange="javascript:loadXMLDoc()" />
+	</form>
+</body>
+</html>
